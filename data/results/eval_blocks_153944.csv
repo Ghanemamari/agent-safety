@@ -1,0 +1,43 @@
+Block,Method,AUROC
+Block1 (In-Domain: injecagent),Linear Probe,1.0
+Block1 (In-Domain: injecagent),Label-Flip Control,0.0
+Block1 (In-Domain: advbench),Linear Probe,1.0
+Block1 (In-Domain: advbench),Label-Flip Control,0.0
+Block1 (In-Domain: stealthy),Linear Probe,1.0
+Block1 (In-Domain: stealthy),Label-Flip Control,0.0
+Block2 (Train: injecagent -> Test: advbench),Random,0.45599999999999996
+Block2 (Train: injecagent -> Test: advbench),Length Classifier,0.8584
+Block2 (Train: injecagent -> Test: advbench),Linear Probe,0.0
+Block2 (Train: injecagent -> Test: advbench),Label-Flip Control,0.0
+Block2 (Train: injecagent -> Test: stealthy),Random,0.4533333333333333
+Block2 (Train: injecagent -> Test: stealthy),Length Classifier,0.671111
+Block2 (Train: injecagent -> Test: stealthy),Linear Probe,0.0
+Block2 (Train: injecagent -> Test: stealthy),Label-Flip Control,0.0
+Block2 (Train: advbench -> Test: injecagent),Random,0.45599999999999996
+Block2 (Train: advbench -> Test: injecagent),Length Classifier,0.6084
+Block2 (Train: advbench -> Test: injecagent),Linear Probe,0.9992
+Block2 (Train: advbench -> Test: injecagent),Label-Flip Control,0.0
+Block2 (Train: advbench -> Test: stealthy),Random,0.4533333333333333
+Block2 (Train: advbench -> Test: stealthy),Length Classifier,0.665556
+Block2 (Train: advbench -> Test: stealthy),Linear Probe,0.028889
+Block2 (Train: advbench -> Test: stealthy),Label-Flip Control,0.0
+Block2 (Train: stealthy -> Test: injecagent),Random,0.45599999999999996
+Block2 (Train: stealthy -> Test: injecagent),Length Classifier,0.5864
+Block2 (Train: stealthy -> Test: injecagent),Linear Probe,0.0
+Block2 (Train: stealthy -> Test: injecagent),Label-Flip Control,0.0496
+Block2 (Train: stealthy -> Test: advbench),Random,0.45599999999999996
+Block2 (Train: stealthy -> Test: advbench),Length Classifier,0.8964
+Block2 (Train: stealthy -> Test: advbench),Linear Probe,0.4112
+Block2 (Train: stealthy -> Test: advbench),Label-Flip Control,0.0
+Block3 (LOD -> Test: injecagent),Random,0.45599999999999996
+Block3 (LOD -> Test: injecagent),Length Classifier,0.5968
+Block3 (LOD -> Test: injecagent),Linear Probe,1.0
+Block3 (LOD -> Test: injecagent),Label-Flip Control,0.0
+Block3 (LOD -> Test: advbench),Random,0.45599999999999996
+Block3 (LOD -> Test: advbench),Length Classifier,0.898
+Block3 (LOD -> Test: advbench),Linear Probe,0.9832
+Block3 (LOD -> Test: advbench),Label-Flip Control,0.0
+Block3 (LOD -> Test: stealthy),Random,0.4533333333333333
+Block3 (LOD -> Test: stealthy),Length Classifier,0.665556
+Block3 (LOD -> Test: stealthy),Linear Probe,0.0
+Block3 (LOD -> Test: stealthy),Label-Flip Control,0.0

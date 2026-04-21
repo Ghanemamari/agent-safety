@@ -1,0 +1,53 @@
+{
+  "mlp_Qwen_Qwen2.5-1.5B-Instruct_feats": {
+    "auroc": 1.0,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "linear_auroc": 1.0,
+    "delta_auroc_mlp_vs_linear": 0.0,
+    "baseline": "mlp_probe",
+    "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "npz": "data\\processed\\Qwen_Qwen2.5-1.5B-Instruct_feats.npz",
+    "n_train": 280,
+    "n_test": 120,
+    "feature_dim": 7680,
+    "epochs": 100,
+    "device": "cpu"
+  },
+  "mlp_TinyLlama_TinyLlama-1.1B-Chat-v1.0_feats": {
+    "auroc": 1.0,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "linear_auroc": 1.0,
+    "delta_auroc_mlp_vs_linear": 0.0,
+    "baseline": "mlp_probe",
+    "model_name": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "npz": "data\\processed_stealthy_large\\TinyLlama_TinyLlama-1.1B-Chat-v1.0_feats.npz",
+    "n_train": 280,
+    "n_test": 120,
+    "feature_dim": 10240,
+    "epochs": 100,
+    "device": "cpu"
+  },
+  "mlp_Qwen_Qwen2.5-0.5B-Instruct_feats": {
+    "auroc": 1.0,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "linear_auroc": 1.0,
+    "delta_auroc_mlp_vs_linear": 0.0,
+    "baseline": "mlp_probe",
+    "model_name": "Qwen/Qwen2.5-0.5B-Instruct",
+    "npz": "data\\processed_stealthy_qwen\\Qwen_Qwen2.5-0.5B-Instruct_feats.npz",
+    "n_train": 280,
+    "n_test": 120,
+    "feature_dim": 4480,
+    "epochs": 100,
+    "device": "cpu"
+  }
+}

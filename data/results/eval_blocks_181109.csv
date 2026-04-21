@@ -1,0 +1,161 @@
+Block,Method,AUROC,F1-Score,Accuracy
+Block1 (In-Domain: injecagent),Linear Probe,1.0,1.0,1.0
+Block1 (In-Domain: injecagent),MLP Probe,1.0,1.0,1.0
+Block1 (In-Domain: injecagent),TF-IDF + LR,1.0,1.0,1.0
+Block1 (In-Domain: injecagent),Semantic MLP,1.0,1.0,1.0
+Block1 (In-Domain: injecagent),Perplexity,0.5378,0.5333,0.5333
+Block1 (In-Domain: injecagent),Random,0.5644,0.5,0.5333
+Block1 (In-Domain: injecagent),Length Classifier,0.8756,0.8571,0.8333
+Block1 (In-Domain: injecagent),Label-Flip Control,0.0,0.0,0.0
+Block1 (In-Domain: advbench),Linear Probe,1.0,1.0,1.0
+Block1 (In-Domain: advbench),MLP Probe,1.0,1.0,1.0
+Block1 (In-Domain: advbench),TF-IDF + LR,1.0,0.8824,0.8667
+Block1 (In-Domain: advbench),Semantic MLP,1.0,1.0,1.0
+Block1 (In-Domain: advbench),Perplexity,0.88,0.8,0.8
+Block1 (In-Domain: advbench),Random,0.5644,0.5,0.5333
+Block1 (In-Domain: advbench),Length Classifier,0.8978,0.8824,0.8667
+Block1 (In-Domain: advbench),Label-Flip Control,0.0,0.0,0.0
+Block1 (In-Domain: agentdojo),Linear Probe,1.0,1.0,1.0
+Block1 (In-Domain: agentdojo),MLP Probe,1.0,1.0,1.0
+Block1 (In-Domain: agentdojo),TF-IDF + LR,1.0,1.0,1.0
+Block1 (In-Domain: agentdojo),Semantic MLP,1.0,1.0,1.0
+Block1 (In-Domain: agentdojo),Perplexity,0.36,0.4667,0.4667
+Block1 (In-Domain: agentdojo),Random,0.5644,0.5,0.5333
+Block1 (In-Domain: agentdojo),Length Classifier,0.8178,0.64,0.7
+Block1 (In-Domain: agentdojo),Label-Flip Control,0.0,0.0,0.0
+Block1 (In-Domain: stealthy),Linear Probe,1.0,0.9474,0.9444
+Block1 (In-Domain: stealthy),MLP Probe,1.0,1.0,1.0
+Block1 (In-Domain: stealthy),TF-IDF + LR,1.0,1.0,1.0
+Block1 (In-Domain: stealthy),Semantic MLP,1.0,1.0,1.0
+Block1 (In-Domain: stealthy),Perplexity,1.0,1.0,1.0
+Block1 (In-Domain: stealthy),Random,0.7407,0.6667,0.6667
+Block1 (In-Domain: stealthy),Length Classifier,0.7778,0.8571,0.8333
+Block1 (In-Domain: stealthy),Label-Flip Control,0.0,0.0,0.0
+Block2 (Train: injecagent -> Test: advbench),Linear Probe,0.0,0.0,0.5
+Block2 (Train: injecagent -> Test: advbench),MLP Probe,0.1024,0.0,0.5
+Block2 (Train: injecagent -> Test: advbench),TF-IDF + LR,1.0,0.0,0.5
+Block2 (Train: injecagent -> Test: advbench),Semantic MLP,0.9808,0.0,0.5
+Block2 (Train: injecagent -> Test: advbench),Perplexity,0.8904,0.8,0.8
+Block2 (Train: injecagent -> Test: advbench),Random,0.456,0.4536,0.47
+Block2 (Train: injecagent -> Test: advbench),Length Classifier,0.8908,0.8197,0.78
+Block2 (Train: injecagent -> Test: advbench),Label-Flip Control,0.0,0.6667,0.5
+Block2 (Train: injecagent -> Test: agentdojo),Linear Probe,0.5252,0.6301,0.73
+Block2 (Train: injecagent -> Test: agentdojo),MLP Probe,0.4996,0.5294,0.68
+Block2 (Train: injecagent -> Test: agentdojo),TF-IDF + LR,1.0,0.0,0.5
+Block2 (Train: injecagent -> Test: agentdojo),Semantic MLP,1.0,1.0,1.0
+Block2 (Train: injecagent -> Test: agentdojo),Perplexity,0.3232,0.4,0.4
+Block2 (Train: injecagent -> Test: agentdojo),Random,0.456,0.4536,0.47
+Block2 (Train: injecagent -> Test: agentdojo),Length Classifier,0.1972,0.0789,0.3
+Block2 (Train: injecagent -> Test: agentdojo),Label-Flip Control,0.0,0.4252,0.27
+Block2 (Train: injecagent -> Test: stealthy),Linear Probe,0.0,0.0,0.5
+Block2 (Train: injecagent -> Test: stealthy),MLP Probe,0.1156,0.0,0.5
+Block2 (Train: injecagent -> Test: stealthy),TF-IDF + LR,1.0,0.0,0.5
+Block2 (Train: injecagent -> Test: stealthy),Semantic MLP,1.0,0.125,0.5333
+Block2 (Train: injecagent -> Test: stealthy),Perplexity,1.0,1.0,1.0
+Block2 (Train: injecagent -> Test: stealthy),Random,0.4533,0.4483,0.4667
+Block2 (Train: injecagent -> Test: stealthy),Length Classifier,0.6711,0.8,0.75
+Block2 (Train: injecagent -> Test: stealthy),Label-Flip Control,0.0,0.6667,0.5
+Block2 (Train: advbench -> Test: injecagent),Linear Probe,0.9996,0.0,0.5
+Block2 (Train: advbench -> Test: injecagent),MLP Probe,0.4992,0.0,0.5
+Block2 (Train: advbench -> Test: injecagent),TF-IDF + LR,1.0,0.1132,0.53
+Block2 (Train: advbench -> Test: injecagent),Semantic MLP,1.0,0.0769,0.52
+Block2 (Train: advbench -> Test: injecagent),Perplexity,0.6284,0.56,0.56
+Block2 (Train: advbench -> Test: injecagent),Random,0.456,0.4536,0.47
+Block2 (Train: advbench -> Test: injecagent),Length Classifier,0.5968,0.0303,0.36
+Block2 (Train: advbench -> Test: injecagent),Label-Flip Control,0.0,0.6667,0.5
+Block2 (Train: advbench -> Test: agentdojo),Linear Probe,1.0,0.6301,0.73
+Block2 (Train: advbench -> Test: agentdojo),MLP Probe,0.8708,0.5915,0.71
+Block2 (Train: advbench -> Test: agentdojo),TF-IDF + LR,0.9984,0.0392,0.51
+Block2 (Train: advbench -> Test: agentdojo),Semantic MLP,1.0,0.0769,0.52
+Block2 (Train: advbench -> Test: agentdojo),Perplexity,0.3232,0.4,0.4
+Block2 (Train: advbench -> Test: agentdojo),Random,0.456,0.4536,0.47
+Block2 (Train: advbench -> Test: agentdojo),Length Classifier,0.1032,0.0,0.35
+Block2 (Train: advbench -> Test: agentdojo),Label-Flip Control,0.0,0.4,0.25
+Block2 (Train: advbench -> Test: stealthy),Linear Probe,0.0289,0.0,0.5
+Block2 (Train: advbench -> Test: stealthy),MLP Probe,0.08,0.0,0.5
+Block2 (Train: advbench -> Test: stealthy),TF-IDF + LR,1.0,0.5366,0.6833
+Block2 (Train: advbench -> Test: stealthy),Semantic MLP,1.0,0.3333,0.6
+Block2 (Train: advbench -> Test: stealthy),Perplexity,1.0,1.0,1.0
+Block2 (Train: advbench -> Test: stealthy),Random,0.4533,0.4483,0.4667
+Block2 (Train: advbench -> Test: stealthy),Length Classifier,0.6656,0.806,0.7833
+Block2 (Train: advbench -> Test: stealthy),Label-Flip Control,0.0,0.6667,0.5
+Block2 (Train: agentdojo -> Test: injecagent),Linear Probe,1.0,1.0,1.0
+Block2 (Train: agentdojo -> Test: injecagent),MLP Probe,1.0,1.0,1.0
+Block2 (Train: agentdojo -> Test: injecagent),TF-IDF + LR,1.0,0.0,0.5
+Block2 (Train: agentdojo -> Test: injecagent),Semantic MLP,1.0,0.8235,0.85
+Block2 (Train: agentdojo -> Test: injecagent),Perplexity,0.6284,0.56,0.56
+Block2 (Train: agentdojo -> Test: injecagent),Random,0.456,0.4536,0.47
+Block2 (Train: agentdojo -> Test: injecagent),Length Classifier,0.3944,0.0,0.46
+Block2 (Train: agentdojo -> Test: injecagent),Label-Flip Control,0.0,0.0,0.0
+Block2 (Train: agentdojo -> Test: advbench),Linear Probe,1.0,0.75,0.8
+Block2 (Train: agentdojo -> Test: advbench),MLP Probe,1.0,1.0,1.0
+Block2 (Train: agentdojo -> Test: advbench),TF-IDF + LR,1.0,0.0,0.5
+Block2 (Train: agentdojo -> Test: advbench),Semantic MLP,0.9692,0.0,0.5
+Block2 (Train: agentdojo -> Test: advbench),Perplexity,0.8904,0.8,0.8
+Block2 (Train: agentdojo -> Test: advbench),Random,0.456,0.4536,0.47
+Block2 (Train: agentdojo -> Test: advbench),Length Classifier,0.1016,0.0,0.46
+Block2 (Train: agentdojo -> Test: advbench),Label-Flip Control,0.0,0.1818,0.1
+Block2 (Train: agentdojo -> Test: stealthy),Linear Probe,0.07,0.0,0.5
+Block2 (Train: agentdojo -> Test: stealthy),MLP Probe,0.1222,0.0,0.5
+Block2 (Train: agentdojo -> Test: stealthy),TF-IDF + LR,1.0,0.0,0.5
+Block2 (Train: agentdojo -> Test: stealthy),Semantic MLP,0.9956,0.0,0.5
+Block2 (Train: agentdojo -> Test: stealthy),Perplexity,1.0,1.0,1.0
+Block2 (Train: agentdojo -> Test: stealthy),Random,0.4533,0.4483,0.4667
+Block2 (Train: agentdojo -> Test: stealthy),Length Classifier,0.3344,0.0,0.4667
+Block2 (Train: agentdojo -> Test: stealthy),Label-Flip Control,0.0,0.6667,0.5
+Block2 (Train: stealthy -> Test: injecagent),Linear Probe,0.0532,0.0,0.5
+Block2 (Train: stealthy -> Test: injecagent),MLP Probe,0.6988,0.0,0.5
+Block2 (Train: stealthy -> Test: injecagent),TF-IDF + LR,0.9652,0.2759,0.58
+Block2 (Train: stealthy -> Test: injecagent),Semantic MLP,0.978,0.1481,0.54
+Block2 (Train: stealthy -> Test: injecagent),Perplexity,0.6284,0.56,0.56
+Block2 (Train: stealthy -> Test: injecagent),Random,0.456,0.4536,0.47
+Block2 (Train: stealthy -> Test: injecagent),Length Classifier,0.604,0.35,0.48
+Block2 (Train: stealthy -> Test: injecagent),Label-Flip Control,0.0,0.6667,0.5
+Block2 (Train: stealthy -> Test: advbench),Linear Probe,0.522,0.0,0.5
+Block2 (Train: stealthy -> Test: advbench),MLP Probe,0.5888,0.0,0.5
+Block2 (Train: stealthy -> Test: advbench),TF-IDF + LR,0.9456,0.3333,0.6
+Block2 (Train: stealthy -> Test: advbench),Semantic MLP,0.936,0.0392,0.51
+Block2 (Train: stealthy -> Test: advbench),Perplexity,0.8904,0.8,0.8
+Block2 (Train: stealthy -> Test: advbench),Random,0.456,0.4536,0.47
+Block2 (Train: stealthy -> Test: advbench),Length Classifier,0.8964,0.8621,0.84
+Block2 (Train: stealthy -> Test: advbench),Label-Flip Control,0.0496,0.6711,0.51
+Block2 (Train: stealthy -> Test: agentdojo),Linear Probe,0.8788,0.0,0.5
+Block2 (Train: stealthy -> Test: agentdojo),MLP Probe,0.7484,0.0,0.5
+Block2 (Train: stealthy -> Test: agentdojo),TF-IDF + LR,0.8688,0.0,0.5
+Block2 (Train: stealthy -> Test: agentdojo),Semantic MLP,0.982,0.1132,0.53
+Block2 (Train: stealthy -> Test: agentdojo),Perplexity,0.3232,0.4,0.4
+Block2 (Train: stealthy -> Test: agentdojo),Random,0.456,0.4536,0.47
+Block2 (Train: stealthy -> Test: agentdojo),Length Classifier,0.1072,0.0,0.34
+Block2 (Train: stealthy -> Test: agentdojo),Label-Flip Control,0.0496,0.6757,0.52
+Block3 (LOO -> Test: injecagent),Linear Probe,1.0,1.0,1.0
+Block3 (LOO -> Test: injecagent),MLP Probe,1.0,1.0,1.0
+Block3 (LOO -> Test: injecagent),TF-IDF + LR,1.0,0.8764,0.89
+Block3 (LOO -> Test: injecagent),Semantic MLP,1.0,0.9899,0.99
+Block3 (LOO -> Test: injecagent),Perplexity,0.6284,0.56,0.56
+Block3 (LOO -> Test: injecagent),Random,0.456,0.4536,0.47
+Block3 (LOO -> Test: injecagent),Length Classifier,0.6384,0.0,0.49
+Block3 (LOO -> Test: injecagent),Label-Flip Control,0.0,0.0,0.0
+Block3 (LOO -> Test: advbench),Linear Probe,1.0,1.0,1.0
+Block3 (LOO -> Test: advbench),MLP Probe,1.0,1.0,1.0
+Block3 (LOO -> Test: advbench),TF-IDF + LR,0.9968,0.0,0.5
+Block3 (LOO -> Test: advbench),Semantic MLP,1.0,0.2456,0.57
+Block3 (LOO -> Test: advbench),Perplexity,0.8904,0.8,0.8
+Block3 (LOO -> Test: advbench),Random,0.456,0.4536,0.47
+Block3 (LOO -> Test: advbench),Length Classifier,0.1024,0.0,0.41
+Block3 (LOO -> Test: advbench),Label-Flip Control,0.0004,0.1818,0.1
+Block3 (LOO -> Test: agentdojo),Linear Probe,1.0,0.8235,0.85
+Block3 (LOO -> Test: agentdojo),MLP Probe,1.0,1.0,1.0
+Block3 (LOO -> Test: agentdojo),TF-IDF + LR,0.998,0.1132,0.53
+Block3 (LOO -> Test: agentdojo),Semantic MLP,1.0,1.0,1.0
+Block3 (LOO -> Test: agentdojo),Perplexity,0.3232,0.4,0.4
+Block3 (LOO -> Test: agentdojo),Random,0.456,0.4536,0.47
+Block3 (LOO -> Test: agentdojo),Length Classifier,0.1568,0.0571,0.34
+Block3 (LOO -> Test: agentdojo),Label-Flip Control,0.0,0.0,0.0
+Block3 (LOO -> Test: stealthy),Linear Probe,0.3089,0.0,0.5
+Block3 (LOO -> Test: stealthy),MLP Probe,0.1589,0.0,0.5
+Block3 (LOO -> Test: stealthy),TF-IDF + LR,1.0,0.4615,0.65
+Block3 (LOO -> Test: stealthy),Semantic MLP,1.0,0.6957,0.7667
+Block3 (LOO -> Test: stealthy),Perplexity,1.0,1.0,1.0
+Block3 (LOO -> Test: stealthy),Random,0.4533,0.4483,0.4667
+Block3 (LOO -> Test: stealthy),Length Classifier,0.4678,0.0,0.4833
+Block3 (LOO -> Test: stealthy),Label-Flip Control,0.0,0.6667,0.5

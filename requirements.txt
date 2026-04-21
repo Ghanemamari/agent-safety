@@ -8,6 +8,7 @@ torch>=2.1
 # Hugging Face
 transformers>=4.39
 accelerate>=0.27
+bitsandbytes>=0.41   # 4-bit quantization for Llama Guard
 
 # ML / Probing
 scikit-learn>=1.3
@@ -21,3 +22,7 @@ matplotlib>=3.7
 seaborn>=0.12
 pandas>=2.0
 scipy>=1.10
+
+# Datasets integration (optional)
+# agentdojo    # pip install agentdojo  (AgentDojo package)
+datasets>=2.14  # HuggingFace datasets (for AdvBench via HF Hub if needed)

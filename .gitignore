@@ -8,6 +8,11 @@ __pycache__/
 dist/
 build/
 
+data/
+*.pdf
+*.png
+__pycache__/
+
 # Virtual env
 env/
 .venv/

@@ -1,0 +1,123 @@
+{
+  "model": "gpt2",
+  "n_samples": 460,
+  "n_injected": 180,
+  "n_benign": 280,
+  "n_layers": 12,
+  "feature_dim_rich": 150,
+  "rich_roc_auc": 0.8998,
+  "rich_pr_auc": 0.8553,
+  "multi_threshold": [
+    {
+      "threshold_target": "t_f1",
+      "threshold_value": 0.3356,
+      "f1": 0.8021,
+      "precision": 0.7549,
+      "recall": 0.8556,
+      "accuracy": 0.8348
+    },
+    {
+      "threshold_target": "t_recall80",
+      "threshold_value": 0.4364,
+      "f1": 0.7826,
+      "precision": 0.766,
+      "recall": 0.8,
+      "accuracy": 0.8261
+    },
+    {
+      "threshold_target": "t_recall90",
+      "threshold_value": 0.1891,
+      "f1": 0.7751,
+      "precision": 0.6807,
+      "recall": 0.9,
+      "accuracy": 0.7957
+    },
+    {
+      "threshold_target": "t_prec80",
+      "threshold_value": 0.5731,
+      "f1": 0.7652,
+      "precision": 0.8,
+      "recall": 0.7333,
+      "accuracy": 0.8239
+    }
+  ],
+  "per_metric": [
+    {
+      "metric": "fiedler_value",
+      "roc_auc": 0.8162,
+      "pr_auc": 0.7554
+    },
+    {
+      "metric": "smoothness_index",
+      "roc_auc": 0.7957,
+      "pr_auc": 0.7788
+    },
+    {
+      "metric": "spectral_entropy",
+      "roc_auc": 0.6491,
+      "pr_auc": 0.6423
+    },
+    {
+      "metric": "energy",
+      "roc_auc": 0.7951,
+      "pr_auc": 0.7536
+    },
+    {
+      "metric": "hfer",
+      "roc_auc": 0.6664,
+      "pr_auc": 0.6283
+    }
+  ],
+  "top10_layer_metric": [
+    {
+      "layer": 11,
+      "metric": "smoothness_index",
+      "roc_auc": 0.7696
+    },
+    {
+      "layer": 1,
+      "metric": "smoothness_index",
+      "roc_auc": 0.6913
+    },
+    {
+      "layer": 5,
+      "metric": "smoothness_index",
+      "roc_auc": 0.67
+    },
+    {
+      "layer": 5,
+      "metric": "energy",
+      "roc_auc": 0.6687
+    },
+    {
+      "layer": 8,
+      "metric": "energy",
+      "roc_auc": 0.6662
+    },
+    {
+      "layer": 4,
+      "metric": "smoothness_index",
+      "roc_auc": 0.6641
+    },
+    {
+      "layer": 6,
+      "metric": "smoothness_index",
+      "roc_auc": 0.6639
+    },
+    {
+      "layer": 6,
+      "metric": "energy",
+      "roc_auc": 0.6614
+    },
+    {
+      "layer": 7,
+      "metric": "energy",
+      "roc_auc": 0.6597
+    },
+    {
+      "layer": 4,
+      "metric": "energy",
+      "roc_auc": 0.658
+    }
+  ]
+}

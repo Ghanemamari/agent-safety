@@ -201,7 +201,9 @@ def generate_report(df, csv_path: str, out_dir: str):
     os.makedirs(out_dir, exist_ok=True)
 
     auroc_pivot = make_pivot(df, "AUROC") if "AUROC" in df.columns else None
+    auprc_pivot = make_pivot(df, "AUPRC") if "AUPRC" in df.columns else None
     f1_pivot    = make_pivot(df, "F1-Score") if "F1-Score" in df.columns else None
+    opt_f1_pivot = make_pivot(df, "Opt-F1") if "Opt-F1" in df.columns else None
     acc_pivot   = make_pivot(df, "Accuracy") if "Accuracy" in df.columns else None
 
     def df_to_md(pivot, metric):
@@ -225,9 +227,17 @@ def generate_report(df, csv_path: str, out_dir: str):
 
 {df_to_md(auroc_pivot, "AUROC")}
 
-## Comparison Table – Average F1-Score
+## Comparison Table – Average AUPRC (Threshold Independent)
+
+{df_to_md(auprc_pivot, "AUPRC")}
+
+## Comparison Table – Average F1-Score (Default Threshold)
 
 {df_to_md(f1_pivot, "F1-Score")}
+
+## Comparison Table – Average Optimal F1-Score (Tuned Threshold)
+
+{df_to_md(opt_f1_pivot, "Opt-F1")}
 
 ## Comparison Table – Average Accuracy
 

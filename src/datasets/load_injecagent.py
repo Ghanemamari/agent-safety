@@ -45,18 +45,32 @@ def _download_json(url: str, cache_path: Path) -> List[Dict]:
 def _build_prompt(entry: Dict) -> str:
     """
     Reconstruct a prompt from an InjecAgent test case.
-    The dataset provides: User Instruction + Tool Response (containing injection).
-    We format it as the agent would see it at inference time.
+    The injected prompt is built by filling the Attacker Instruction into
+    the Tool Response Template.
     """
     user_instr = entry.get("User Instruction", "").strip()
-    # Tool response is where the injection is embedded
-    tool_response = entry.get("Injected Tool Response", entry.get("Tool Response", "")).strip()
-    attack_instr = entry.get("Injected Instruction", "").strip()
 
-    if tool_response:
+    # The template contains a placeholder like: '...{injected_instruction}...'
+    # The attacker instruction is substituted into it.
+    template   = entry.get("Tool Response Template", "").strip()
+    atk_instr  = entry.get("Attacker Instruction", "").strip()
+
+    if template and atk_instr:
+        # Replace placeholder if present, else append
+        if "{injected_instruction}" in template:
+            injected_resp = template.replace("{injected_instruction}", atk_instr)
+        else:
+            injected_resp = template + " " + atk_instr
+    elif template:
+        injected_resp = template
+    else:
+        # Fallback: just use tool response directly
+        injected_resp = entry.get("Tool Response", "").strip()
+
+    if injected_resp:
         prompt = (
             f"User instruction: {user_instr}\n\n"
-            f"Tool response: {tool_response}"
+            f"Tool response: {injected_resp}"
         )
     else:
         prompt = f"User instruction: {user_instr}"

@@ -1,0 +1,3 @@
+Method,AUROC,F1-Score,Accuracy
+TF-IDF + LR,0.9999,0.9888,0.9857
+Semantic MLP,0.9999,0.9945,0.9929

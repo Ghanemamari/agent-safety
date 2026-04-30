@@ -184,7 +184,9 @@ def safe_append(results: list, block: str, method: str, m: dict):
         "Block":    block,
         "Method":   method,
         "AUROC":    round(m.get("auroc",    float("nan")), 4),
+        "AUPRC":    round(m.get("auprc",    float("nan")), 4),
         "F1-Score": round(m.get("f1",       float("nan")), 4),
+        "Opt-F1":   round(m.get("opt_f1",   float("nan")), 4),
         "Accuracy": round(m.get("accuracy", float("nan")), 4),
     })
 

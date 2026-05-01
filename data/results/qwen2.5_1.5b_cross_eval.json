@@ -1,0 +1,16 @@
+{
+  "auroc": 1.0,
+  "accuracy": 0.705,
+  "f1": 0.5816,
+  "precision": 1.0,
+  "recall": 0.41,
+  "threshold": 0.5,
+  "train_datasets": [
+    "data/processed/qwen2.5_1.5b/injecagent.npz",
+    "data/processed/qwen2.5_1.5b/advbench.npz"
+  ],
+  "test_dataset": "data/processed/qwen2.5_1.5b/agentdojo.npz",
+  "n_train": 3148,
+  "n_test": 200,
+  "feature_dim": 7680
+}

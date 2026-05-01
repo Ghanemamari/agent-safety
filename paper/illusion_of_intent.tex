@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{The Illusion of Intent: Why Linear Probes Fail on Semantic Jailbreaks}
+\author{Anonymous Authors}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Recent work in AI safety has demonstrated the ability to detect malicious intent within the hidden activations of Large Language Models (LLMs) using linear probes. In this paper, we conduct a rigorous ablation study on intent-detection probes across multiple state-of-the-art architectures (Llama-3.2, Mistral-7B, Qwen-2.5). We reveal a "Clever Hans" effect: while probes achieve near-perfect out-of-distribution generalization (AUROC $\approx 1.0$) on standard benchmarks, their performance entirely collapses (AUROC $< 0.1$) when superficial lexical artifacts (e.g., "system", "ignore", "bypass") are redacted from the input. We prove that current linear probes do not learn abstract semantic intent; rather, they act as sophisticated word counters. To resolve this, we propose Contrastive Intent Probing using synthetically paired adversarial prompts to force models to learn true semantic boundaries.
+\end{abstract}
+
+\section{Introduction}
+As LLMs are increasingly deployed as autonomous agents, detecting malicious intent before execution is critical. Current methods rely on training linear classifiers on the hidden activations of the LLM. While initial results show perfect generalization, we hypothesise that these probes are overfitting to the lexical distribution of the training datasets rather than understanding abstract semantics.
+
+\section{Methodology}
+\subsection{Artifact Ablation Test}
+We extract the top 50 predictive lexical features using a TF-IDF baseline. We then recursively redact these tokens from both the training and test datasets to measure the true semantic robustness of the probe.
+
+\subsection{Cross-Dataset Evaluation}
+To ensure the probe is not memorizing formatting, we train on a combination of \textit{InjecAgent} and \textit{AdvBench}, and evaluate strictly on a held-out test set (\textit{AgentDojo}).
+
+\section{Results}
+Our findings show a consistent pattern across all tested models (Llama-3.2 1B, Mistral 7B, Qwen 1.5B):
+\begin{itemize}
+    \item \textbf{High Baseline Performance:} Cross-dataset AUROC reaches 1.000, suggesting perfect generalization.
+    \item \textbf{Catastrophic Collapse:} Post-ablation, the AUROC collapses to $\approx 0.09$, indicating the probe has completely lost its discriminative power once lexical "cheat" tokens are removed.
+\end{itemize}
+
+\section{Proposed Solution: Contrastive Paired Probing}
+To build probes that actually capture intent, we must break the lexical correlation. We propose training non-linear (MLP) probes on \textit{contrastive datasets}---pairs of prompts that share identical vocabulary but possess inverted semantic intents (e.g., safe vs. malicious). This forces the probe to detect the relational semantics rather than token presence.
+
+\end{document}

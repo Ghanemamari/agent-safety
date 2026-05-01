@@ -1,0 +1,13 @@
+{
+  "auroc": 0.0956,
+  "accuracy": 0.1406,
+  "f1": 0.1605,
+  "precision": 0.1566,
+  "recall": 0.1646,
+  "threshold": 0.5,
+  "model_name": "meta-llama/Llama-3.2-3B",
+  "npz": "data/processed/llama3.2_3b/injecagent_ablated.npz",
+  "n_train": 1475,
+  "n_test": 633,
+  "feature_dim": 15360
+}

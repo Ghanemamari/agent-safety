@@ -1,0 +1,12 @@
+{
+  "probe_type": "MLP (Non-Linear)",
+  "auroc": 0.4414906361058979,
+  "accuracy": 0.49921011058451814,
+  "f1": 0.6659641728134879,
+  "precision": 0.49921011058451814,
+  "recall": 1.0,
+  "npz": "data/processed/mistral7b_v0.3/injecagent_ablated.npz",
+  "n_train": 1475,
+  "n_test": 633,
+  "feature_dim": 20480
+}

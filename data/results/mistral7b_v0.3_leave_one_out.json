@@ -1,0 +1,37 @@
+{
+  "baseline_auroc": 0.0802,
+  "layers": [
+    0,
+    8,
+    16,
+    24,
+    31
+  ],
+  "leave_one_out": [
+    {
+      "removed_layer": 0,
+      "auroc": 0.079,
+      "auroc_drop": 0.0011999999999999927
+    },
+    {
+      "removed_layer": 8,
+      "auroc": 0.08,
+      "auroc_drop": 0.00019999999999999185
+    },
+    {
+      "removed_layer": 16,
+      "auroc": 0.0749,
+      "auroc_drop": 0.005299999999999999
+    },
+    {
+      "removed_layer": 24,
+      "auroc": 0.0797,
+      "auroc_drop": 0.0005000000000000004
+    },
+    {
+      "removed_layer": 31,
+      "auroc": 0.0832,
+      "auroc_drop": -0.0030000000000000027
+    }
+  ]
+}

@@ -13,7 +13,9 @@ Our methodology demonstrates that prompt injections (such as "ignore previous in
 - **Stealthy Benchmarking**: Evaluation on datasets designed to isolate semantic signal from formatting artifacts.
 - **Statistical Rigor**: Built-in tools for computing p-values, Cohen's d effect sizes, and bootstrap confidence intervals.
 
+## Level of Autonomy
 
+The detection system described in this repository is intended to be deployed in a **supervised** mode. The model produces anomaly scores or alerts based on latent activation patterns, but **no automated action is taken** based solely on these scores. A human operator must review each alert and decide whether to mitigate the suspected prompt injection (e.g., by blocking the input, requesting user clarification, or logging the event). This mandatory human validation ensures that the system operates with a clear point of intervention and maintains safety while allowing flexibility in deployment.
 
 ## Installation
 
@@ -238,31 +240,4 @@ The mixed pool is evaluated per source dataset using 5-fold stratified CV out-of
 | MLP Probe (activation) | TinyLlama-1.1B | In-domain | **1.000** | No — collapses to 0.1–0.9 |
 | MLP Probe (activation) | Qwen2.5-1.5B | In-domain | **1.000** | No — collapses to 0.1–0.9 |
 | TF-IDF + LR (text) | — | Cross-domain | 0.869–1.000 | Partially (lexical bias) |
-| Semantic MLP (embeddings) | all-MiniLM-L6 | Cross-domain | 0.936–1.000 | Mostly yes |
-| Perplexity | — | Stealthy | **1.000** | Dataset-dependent |
-| **Rich Sweep (spectral)** | **GPT-2** | **Mixed cross-dataset** | **0.900** | **Yes** |
-| **Rich Sweep (spectral)** | **Llama-3.2-3B-Instruct** | **Mixed cross-dataset** | **0.889** | **Yes** |
-| **Rich Sweep (spectral)** | **TinyLlama-1.1B-Chat** | **Mixed cross-dataset** | **0.866** | **Yes** |
-| **Rich Sweep (spectral)** | **Llama-3.2-1B-Instruct** | **Mixed cross-dataset** | **0.858** | **Yes** |
-
-> The spectral rich sweep occupies a unique position: it does not require access to model hidden states (only attention weights), is architecture-agnostic, and maintains 0.86–0.90 AUROC across heterogeneous datasets where activation probes collapse. The main trade-off vs. in-domain probes is a ~10 pp gap on easy in-domain benchmarks. Notably, TinyLlama achieves a stronger `fiedler_value` trajectory AUC (0.840) than the same metric on Llama-3.2-1B (0.715), suggesting that the chat-tuned attention structure is better aligned with injection semantics than a raw instruction model at the same scale.
-
----
-
-## Repository Structure
-
-- `src/`: Core implementation.
-  - `extract/`: Hidden state extraction logic.
-  - `probes/`: Linear probe training and leakage validation.
-  - `generate/`: Dataset generation scripts (Base, Stealthy, Complex).
-  - `baselines/`: TF-IDF, Semantic, and Statistical baseline implementations.
-  - `analysis/`: Comprehensive reporting and advanced stats.
-- `data/`: Raw prompts, processed features, and visualization artifacts.
-  - `rich_sweep_results/`: GPT-2 spectral-trust rich sweep outputs.
-  - `rich_sweep_results_llama1b/`: Llama-3.2-1B-Instruct spectral-trust rich sweep outputs.
-  - `rich_sweep_results_llama3b/`: Llama-3.2-3B-Instruct spectral-trust rich sweep outputs.
-  - `rich_sweep_results_tinyllama/`: TinyLlama-1.1B-Chat spectral-trust rich sweep outputs.
-- `scripts/`: Utility scripts (plotting).
-- `rich_sweep_eval.py`: Spectral-trust rich sweep evaluation script.
-
-```
+| Semantic MLP (embedding
